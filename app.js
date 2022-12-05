@@ -56,9 +56,8 @@ btnAdd.addEventListener('click', async function () {
 
 render();
 async function render() {
-  let products = await fetch(API)
-    .then((res) => res.json())
-    .catch((err) => console.log(err));
+  let responce = await fetch(API)
+  let products = await responce.json()
 
   list.innerHTML = ''
 
